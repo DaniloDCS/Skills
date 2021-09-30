@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APM</title>
+    <link rel="stylesheet" href="apm.css">
+    <script async src="apm.js"></script>
+</head>
+
+<body>
+   <div class="container">
+        <div id="start">
+                <h2>Hello ;)</h2>
+                <div>
+                    <label for="">How quantity of circles?</label>
+                    <input type="range" id="quantity" oninput="rangeViewer(this.id, this.value)" value="10" step="10" min="10" max="100">
+                    <span class="viwer">
+                        <strong id="quantityRange">10</strong>
+                    </span>
+                </div>
+                <div>
+                    <label for="">How frequently they be generated?</label>
+                    <input type="range" id="frequently" oninput="rangeViewer(this.id, this.value)" value="2" min="2" max="10">
+                    <span class="viwer">
+                        <strong id="frequentlyRange">2</strong>
+                    </span>
+                </div>
+                <div>
+                    <label for="">Do you want the position of the circles to change with every click?</label>
+                    <input type="checkbox" id="aleatory">
+                </div>
+                <button class="btn-start" onclick="start()">Start</button>
+            </div> 
+        <div class="game">
+            <div id="timer">00:00</div>
+            <div class="display" id="display"></div>
+            <div>
+                <button class="btn-stop" onclick="stop()">Stop</button>
+                <button class="btn-restart" onclick="restart()">Restart</button>
+            </div>
+        </div>
+        <div id="finish">
+            <h1>You finished :)</h1>
+            <h2 id="apmResult"></h2>
+            <button class="btn-restart" onclick="restart()">Restart</button>
+        </div>
+   </div>
+</body>
+
+</html>
